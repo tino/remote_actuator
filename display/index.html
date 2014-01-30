@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>EXO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="public/js/modernizr-2.6.2.min.js"></script>
+    </head>
+
+    <body>
+
+    <div class="container">
+      <div class="row toprow">
+        <div id="connection" class="col-xs-offset-2 col-xs-2">connection</div>
+        <div id="dir" class="col-xs-2">direction: <span id="direction">0</span></div>
+        <div id="moving" class="col-xs-2 state state-1">moving <button id="stop">Stop</button></div>
+        <div id="rest" class="col-xs-2 state state-0">rest</div>
+        <div id="stopping" class="col-xs-2 state state--1">stopping</div>
+      </div>
+      <h2 class="text-center">Instellen</h2>
+      <div class="row">
+        <div class="slider col-xs-offset-2 col-xs-8 row">
+          <div class="col-xs-1">In</div>
+          <div class="col-xs-10"><input type="range" name="mover" id="mover" min="1" max="100"></div>
+          <div class="col-xs-1">Uit</div>
+        </div>
+      </div>
+      <h2 class="text-center">Positie</h2>
+      <div class="row">
+        <div class="position col-xs-offset-2 col-xs-8 row">
+          <div class="col-xs-1">In</div>
+          <div class="col-xs-10"><input type="range" name="position" id="position" min="1" max="100" disabled></div>
+          <div class="col-xs-1">Uit</div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
+

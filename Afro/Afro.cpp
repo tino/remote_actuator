@@ -2,7 +2,10 @@
 
 #include "Afro.h"
 
-Afro::Afro(void) {}
+Afro::Afro(void) {
+  unsigned char _id;
+  int _debug;
+}
 
 void Afro::begin(unsigned char id, int debug)
 {
@@ -12,9 +15,9 @@ void Afro::begin(unsigned char id, int debug)
 /* begin method for overriding default serial bitrate */
 void Afro::begin(unsigned char id, int debug, long speed)
 {
-  unsigned char _id = id;
-  int _debug = debug;
-  Serial.begin(id, speed);
+  _id = id;
+  _debug = debug;
+  Serial.begin(speed);
 }
 
 void Afro::attach(unsigned char command, callbackFunction newFunction)
@@ -95,6 +98,10 @@ void Afro::processSerial(void)
         serialState = 3;
       }
       else {
+        Serial.print("c");
+        Serial.println(c);
+        Serial.print("id:");
+        Serial.println(_id);
         serialState = 0;
       }
     break;
@@ -137,7 +144,6 @@ void Afro::processSerial(void)
         serialState = 0;
         return;
       }
-
       switch(command) {
         case 'A': (*cbA)(from, operand1, operand2); break;
         case 'B': (*cbB)(from, operand1, operand2); break;

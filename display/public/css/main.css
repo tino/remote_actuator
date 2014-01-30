@@ -1,0 +1,20 @@
+body { padding-bottom: 30px; }
+
+input[type=range] {
+    width: 100%;
+}
+
+.toprow div {
+    padding: 20px;
+}
+
+#connection {
+    background-color: red;
+}
+#connection.connected {
+    background-color: green;
+}
+
+.state-0 { background-color: white}
+.state-1 { background-color: green}
+.state--1 { background-color: yellow}
