@@ -1,4 +1,4 @@
 remote_actuator
 ===============
 
-Remotely driving a linear actuator with two Arduino's and XBee's
+Remotely driving a linear actuator with XBee's, an Arduino and a web interface.
